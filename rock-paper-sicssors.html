@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+
+<body>
+    <script>
+        let computerChoice = Math.random();
+        if (computerChoice >= 0 && computerChoice < 1 / 3) {
+            computerChoice = 'Rock';
+        } else if (computerChoice >= 1 / 3 && computerChoice < 2 / 3) {
+            computerChoice = 'Paper';
+        } else if (computerChoice > 2 / 3) {
+            computerChoice = 'Scissors';
+        }
+        console.log(computerChoice);
+    </script>
+
+    <button onclick="
+        if (computerChoice === 'Rock'){
+            result = 'Tie.';
+        } else if (computerChoice === 'Paper') {
+            result = 'Computer Win.'
+        } else if (computerChoice === 'Scissors') {
+            result = 'You Win.'
+        }
+        alert(`You chose Rock. Computer chose ${computerChoice}. Result ${result}`);
+        ">Rock</button>
+    <button onclick="
+        if (computerChoice === 'Rock'){
+            result = 'You Win';
+        } else if (computerChoice === 'Paper') {
+            result = 'You Loose'
+        } else if (computerChoice === 'Scissors') {
+            result = 'You Win'
+        }
+        alert(`You chose Paper. Computer chose ${computerChoice}. Result ${result}`);
+        ">Paper</button>
+    <button onclick="
+        if (computerChoice === 'Rock'){
+            result = 'Computer Win.';
+        } else if (computerChoice === 'Paper') {
+            result = 'You Win.'
+        } else if (computerChoice === 'Scissors') {
+            result = 'Tie.'
+        }
+        alert(`You chose Scissors. Computer chose ${computerChoice}. Result ${result}`);
+        ">Scissors</button>
+</body>
+
+</html>
