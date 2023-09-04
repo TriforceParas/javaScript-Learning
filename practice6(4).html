@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 6(4)</title>
+</head>
+<body>
+    <button onclick="
+        if (cartQuantity < 10) {
+            cartQuantity += 1;
+            console.log(cartQuantity);
+        } else {
+            console.log('Cart has maximum quantity!');
+            console.log(cartQuantity);
+        }
+        ">Add to cart</button>
+    <button onclick="
+    if (cartQuantity <= 2) {
+        cartQuantity = 0;
+        console.log('Cart is Empty!')
+        console.log(cartQuantity)
+    } else if (cartQuantity > 2) {
+        cartQuantity -= 2;
+        console.log(cartQuantity)
+    }
+    ">-2</button>
+    <button onclick="
+    if (cartQuantity <= 3) {
+        cartQuantity = 0;
+        console.log('Cart is Empty!')
+        console.log(cartQuantity)
+    } else if (cartQuantity > 3) {
+        cartQuantity -= 3;
+        console.log(cartQuantity)
+    }
+    ">-3</button>
+    <script>
+        let cartQuantity = 6;
+    </script>
+</body>
+</html>
