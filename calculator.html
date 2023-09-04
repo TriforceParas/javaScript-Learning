@@ -23,37 +23,42 @@
 <body style="background-color: black;">
     <p style="color: white;font-family: Arial;font-size: 20px;">Calculator</p>
     <p class="first-row">
-        <button onclick="calculation += '1';console.log(calculation)">1</button>
-        <button onclick="calculation += '2';console.log(calculation)">2</button>
-        <button onclick="calculation += '3';console.log(calculation)">3</button>
+        <button onclick="caclculate('1');">1</button>
+        <button onclick="caclculate('2');">2</button>
+        <button onclick="caclculate('3');">3</button>
         <button style="background-color: rgb(255, 166, 0);"
-            onclick="calculation += '+';console.log(calculation)">+</button>
+            onclick="caclculate('+');">+</button>
     </p>
     <p class="second-row">
-        <button onclick="calculation += '4';console.log(calculation)">4</button>
-        <button onclick="calculation += '5';console.log(calculation)">5</button>
-        <button onclick="calculation += '6';console.log(calculation)">6</button>
+        <button onclick="caclculate('4');">4</button>
+        <button onclick="caclculate('5');">5</button>
+        <button onclick="caclculate('6');">6</button>
         <button style="background-color: rgb(255, 166, 0);"
-            onclick="calculation += '+';console.log(calculation)">-</button>
+            onclick="caclculate('-');">-</button>
     </p>
     <p class="third-row">
-        <button onclick="calculation += '7';console.log(calculation)">7</button>
-        <button onclick="calculation += '8';console.log(calculation)">8</button>
-        <button onclick="calculation += '9';console.log(calculation)">9</button>
+        <button onclick="caclculate('7');">7</button>
+        <button onclick="caclculate('8');">8</button>
+        <button onclick="caclculate('9');">9</button>
         <button style="background-color: rgb(255, 166, 0);"
-            onclick="calculation += '+';console.log(calculation)">*</button>
+            onclick="caclculate('*');">*</button>
     </p>
     <p class="fourth-row">
-        <button onclick="calculation += '0';console.log(calculation)">0</button>
-        <button onclick="calculation += '+';console.log(calculation)">.</button>
-        <button onclick="calculation = eval(calculation);console.log(calculation)">=</button>
+        <button onclick="caclculate('0');">0</button>
+        <button onclick="caclculate('.');">.</button>
+        <button onclick="calculation = eval(calculation);
+        console.log(calculation);">=</button>
         <button style="background-color: rgb(255, 166, 0);"
-            onclick="calculation += '/';console.log(calculation)">/</button>
+            onclick="caclculate('/');">/</button>
     </p>
     <button style="font-size: 15px;" onclick="calculation = '';console.log('Cleared.')">Clear</button>
 
     <script>
         let calculation = '';
+        function caclculate(value) {
+            calculation += value;
+            console.log(calculation);
+        }
     </script>
 </body>
 
