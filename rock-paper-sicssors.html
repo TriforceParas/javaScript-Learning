@@ -8,48 +8,50 @@
 </head>
 
 <body>
-    <script>
-        let computerChoice = Math.random();
-        if (computerChoice >= 0 && computerChoice < 1 / 3) {
-            computerChoice = 'Rock';
-        } else if (computerChoice >= 1 / 3 && computerChoice < 2 / 3) {
-            computerChoice = 'Paper';
-        } else if (computerChoice > 2 / 3) {
-            computerChoice = 'Scissors';
-        }
-        console.log(computerChoice);
-    </script>
-
     <button onclick="
-        if (computerChoice === 'Rock'){
-            result = 'Tie.';
-        } else if (computerChoice === 'Paper') {
-            result = 'Computer Win.'
-        } else if (computerChoice === 'Scissors') {
-            result = 'You Win.'
-        }
-        alert(`You chose Rock. Computer chose ${computerChoice}. Result ${result}`);
+        computerChoice = getComputerChoice();
+        result = getResult('Rock', 'Scissors', 'Paper', computerChoice);
+        alertResult('Rock', computerChoice, result);
         ">Rock</button>
     <button onclick="
-        if (computerChoice === 'Rock'){
-            result = 'You Win';
-        } else if (computerChoice === 'Paper') {
-            result = 'Tie'
-        } else if (computerChoice === 'Scissors') {
-            result = 'You Win'
-        }
-        alert(`You chose Paper. Computer chose ${computerChoice}. Result ${result}`);
+        computerChoice = getComputerChoice();
+        result = getResult('Paper', 'Rock', 'Scissors', computerChoice);
+        alertResult('Paper', computerChoice, result);
         ">Paper</button>
     <button onclick="
-        if (computerChoice === 'Rock'){
-            result = 'Computer Win.';
-        } else if (computerChoice === 'Paper') {
-            result = 'You Win.'
-        } else if (computerChoice === 'Scissors') {
-            result = 'Tie.'
-        }
-        alert(`You chose Scissors. Computer chose ${computerChoice}. Result ${result}`);
+        computerChoice = getComputerChoice();
+        result = getResult('Scissors', 'Paper', 'Rock', computerChoice);
+        alertResult('Scissors', computerChoice, result);
         ">Scissors</button>
+    <script>
+        let computerChoice = NaN;
+        let result = NaN;
+        function getComputerChoice() {
+            const computerChoice = Math.random();
+            if (computerChoice >= 0 && computerChoice < 1/3) {
+                return 'Rock';
+            } else if (computerChoice >= 1/3 && computerChoice < 2/3) {
+                return 'Paper';
+            } else if (computerChoice <= 1) {
+                return 'Scissors';
+            }
+        }
+
+        function getResult(result1, result2, result3, computerChoice) {
+            if (computerChoice === result1) {
+                return 'Tie'
+            } else if (computerChoice === result2) {
+                return 'You Win'
+            } else if (computerChoice === result3) {
+                return 'Computer Win'
+            }
+
+        }
+
+        function alertResult (yourChoice, computerChoice, result) {
+            alert(`You Chose ${yourChoice}. Computer Chose ${computerChoice}. Result ${result}`);
+        }
+    </script>
 </body>
 
 </html>
