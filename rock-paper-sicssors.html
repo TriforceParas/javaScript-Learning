@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rock-paper-scissors-ctyle.css">
 </head>
 
 <body>
@@ -68,6 +69,7 @@
         function alertResult(yourChoice, computerChoice, result) {
             alert(`You Chose ${yourChoice}. Computer Chose ${computerChoice}. Result ${result}\nWins: ${score.wins} Loss: ${score.loss} Tie: ${score.tie}`);
             localStorage.setItem('score', JSON.stringify(score));
+            
         }
     </script>
 </body>
