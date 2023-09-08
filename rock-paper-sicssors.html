@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="rock-paper-scissors-ctyle.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body button {
+            padding: 30px 50px;
+            margin-left: 30px;
+            margin-top: 300px;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -69,7 +83,7 @@
         function alertResult(yourChoice, computerChoice, result) {
             alert(`You Chose ${yourChoice}. Computer Chose ${computerChoice}. Result ${result}\nWins: ${score.wins} Loss: ${score.loss} Tie: ${score.tie}`);
             localStorage.setItem('score', JSON.stringify(score));
-            
+
         }
     </script>
 </body>
