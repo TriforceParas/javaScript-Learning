@@ -5,36 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>
-        button {
-            height: 60px;
-            width: 60px;
-            font-size: 25px;
-            border-radius: 30px;
-            border: none;
-            color: white;
-            background-color: rgb(60, 60, 60);
-            margin-right: 10px;
-            transition: background-color 0.15s;
-
-        }
-
-        button:hover {
-            background-color: rgb(103, 103, 103);
-        }
-
-        .fifth-row button {
-            font-size: 15px;
-        }
-
-        .action-button {
-            background-color: orange;
-        }
-
-        .action-button:hover {
-            background-color: rgb(255, 193, 77);
-        }
-    </style>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
 </head>
 
 <body style="background-color: black;">
@@ -73,14 +45,6 @@
             Delete</button>
     </p>
 
-    <script>
-        let calculation = JSON.parse(localStorage.getItem('calculationSaved')) || '';
-        function caclculate(value) {
-            calculation += value;
-            localStorage.setItem('storeCalculation', JSON.stringify(calculation));
-            console.log(calculation);
-        }
-    </script>
 </body>
 
 </html>

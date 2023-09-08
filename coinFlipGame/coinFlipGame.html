@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="coinFlip.css">
+    <script src="coinFlip.js"></script>
+</head>
+
+<body>
+    <button onclick="winCheck('Tails', score);alertScore();">Tails</button>
+    <button onclick="winCheck('Heads', score);alertScore();">Heads</button>
+    <button onclick="score = {
+        wins: 0,
+        losts: 0
+    };
+    localStorage.removeItem('score');">
+        Reset Score</button>    
+</body>
+
+</html>
