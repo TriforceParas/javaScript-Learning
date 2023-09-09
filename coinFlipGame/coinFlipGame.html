@@ -10,14 +10,13 @@
 </head>
 
 <body>
+    <div>
     <button onclick="winCheck('Tails', score);alertScore();">Tails</button>
     <button onclick="winCheck('Heads', score);alertScore();">Heads</button>
-    <button onclick="score = {
-        wins: 0,
-        losts: 0
-    };
-    localStorage.removeItem('score');">
-        Reset Score</button>    
+    <button onclick="resetScore();alertScore();">
+        Reset Score</button>
+    <p class="result"></p>
+    </div>
 </body>
 
 </html>

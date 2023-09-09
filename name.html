@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input onkeyup="welcomeName()" class="input-name" placeholder="Enter Your Name">
+    <button onclick=" welcomeName();">Submit</button>
+    <p class="welcome-name"></p>
+    <script>
+        function welcomeName() {
+            const name = document.querySelector('.input-name');
+            let inputName = String(name.value);
+            document.querySelector('.welcome-name').innerHTML = `Your name is: ${inputName}`;
+        };
+
+        function keyDownEvent(event) {
+            if (event.key) {
+                welcomeName();
+            }
+        }
+    </script>
+</body>
+
+</html>

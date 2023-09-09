@@ -6,12 +6,17 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 function winCheck(userInput, object) {
     let checker = Math.random();
     checker = (checker >= 0 && checker < 1 / 2) ? 'Heads' : 'Tails';
-    console.log(checker);
     (checker === userInput) ? object.wins += 1 : object.losts += 1;
-    console.log(object);
 };
 
 function alertScore() {
-    alert(`Wins: ${score.wins} Losts: ${score.losts}`);
     localStorage.setItem('score', JSON.stringify(score));
+    document.querySelector('.result').innerHTML = `Wins: ${score.wins} Losts: ${score.losts}`;
 }
+ function resetScore() {
+    score = {
+        wins: 0,
+        losts: 0
+    };
+    localStorage.removeItem('score');
+ }
