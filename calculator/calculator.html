@@ -10,7 +10,8 @@
 </head>
 
 <body style="background-color: black;">
-    <p style="color: white;font-family: Arial;font-size: 20px;">Calculator</p>
+    <p class="title">Calculator</p>
+    <p class="outputResult"></p>
     <p class="first-row">
         <button onclick="caclculate('1');">1</button>
         <button onclick="caclculate('2');">2</button>
@@ -33,15 +34,14 @@
         <button onclick="caclculate('0');">0</button>
         <button onclick="caclculate('.');">.</button>
         <button onclick="calculation = eval(calculation);
-        console.log(calculation);
-        localStorage.setItem('calculationSaved', JSON.stringify(calculation));">=</button>
+        localStorage.setItem('calculationSaved', JSON.stringify(calculation));showCalculation();">=</button>
         <button class="action-button" onclick="caclculate('/');">/</button>
     </p>
     <p class="fifth-row">
-        <button onclick="calculation = '';console.log('Cleared.')">Clear</button>
+        <button onclick="calculation = '';showCalculation();">Clear</button>
         <button onclick="
     calculation = '';
-    localStorage.removeItem('storeCalculation');">
+    localStorage.removeItem('storeCalculation');showCalculation();">
             Delete</button>
     </p>
 

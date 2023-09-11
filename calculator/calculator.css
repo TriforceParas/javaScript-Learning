@@ -1,3 +1,13 @@
+.title{
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.outputResult {
+    color: white;
+}
+
 button {
     height: 60px;
     width: 60px;
