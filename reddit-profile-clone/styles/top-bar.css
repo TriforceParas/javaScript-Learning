@@ -1,0 +1,115 @@
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color:#1a1a1b;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(51, 51, 51);
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    width: 140px;
+    justify-content: space-between;
+    margin-left: 24px;
+    flex-shrink: 0;
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 40px;
+    margin: 0px 10px 0px 60px;
+    max-width: 800px;
+}
+
+.search-bar {
+    height: 36px;
+    padding-left: 15px;
+    border: solid 1px rgb(83, 83, 83);
+    background-color: rgb(58, 57, 57);
+    flex: 1;
+    font-size: 16px;
+    width: 0;
+    border-radius: 40px;
+    text-indent: 10px;
+}
+
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    color: rgb(177, 176, 176);
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    
+}
+
+.right-section span ion-icon,
+.advertise ion-icon{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.right-section span {
+    width: 90px;
+    color: white;
+}
+
+.reddit-logo {
+    margin-right: 10px;
+}
+
+.sub-menu {
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu .profile-picture {
+    margin-right: 10px;
+}
+
+.sub-menu .user-name {
+    color: white;
+    font-size: 12px; 
+    display: flex;
+}
+
+.right-section .profile div img{
+    margin-right: 10px;
+}
+
+.profile-name-karma {
+    font-size: 13px; 
+    color: white;
+}
+
+.profile {
+    display: flex; 
+    align-items: center;
+}
+
+.advertise {
+    align-items: center;
+    display: flex;
+    color: white;
+    margin-right: 10px;
+    font-size: 12px;
+
+}
