@@ -124,3 +124,17 @@ console.log(minMax([-2, 3, -5, 7, 10]));
 // 11(m)
 console.log(minMax([]));
 console.log(minMax([3]));
+
+// 11(n)
+function countWords(words) {
+  const result = {};
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    if (!result[word]) {
+      result[word] = 1;
+    } else result[word]++
+  }
+  return result
+}
+
+console.log(countWords(['apple','grape','apple','apple']));
