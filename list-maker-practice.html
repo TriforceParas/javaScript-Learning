@@ -2,45 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Maker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Maker</title>
 </head>
 
 <body>
-    <p>Todo List</p>
-    <input class="todo-input" placeholder="Todo name"><button onclick="addTodoList();" class="add-button">Add</button>
-    <div class="js-todo-list"></div>
-    <script>
-        const todoList = ['make a JS project', 'Make a coffee for yourslef'];
+  <p>Todo List</p>
+  <input class="todo-input" placeholder="Todo name"><button onclick="addTodoList();" class="add-button">Add</button>
+  <div class="js-todo-list"></div>
+  <script>
+    const todoList = ['make a JS project', 'Make a coffee for yourslef'];
 
-        renderTodoList()
+    renderTodoList()
 
-        function renderTodoList() {
-            let todoListHTML = '';
+    function renderTodoList() {
+      let todoListHTML = '';
 
-            for (let i = 0; i < todoList.length; i++) {
-                const todoItems = todoList[i];
-                const html = `<p>${todoItems}</p>`;
-                todoListHTML += html;
-            }
-            console.log(todoListHTML);
+      for (let i = 0; i < todoList.length; i++) {
+        const todoItems = todoList[i];
+        const html = `<p>${todoItems}</p>`;
+        todoListHTML += html;
+      }
+      console.log(todoListHTML);
 
-            document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-        }
+      document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+    }
 
-        function addTodoList() {
-            const inputElement = document.querySelector('.todo-input');
-            const name = inputElement.value;
+    function addTodoList() {
+      const inputElement = document.querySelector('.todo-input');
+      const name = inputElement.value;
 
-            todoList.push(name);
-            console.log(todoList);
+      todoList.push(name);
+      console.log(todoList);
 
-            inputElement.value = '';
-            
-            renderTodoList()
-        }
-    </script>
+      inputElement.value = '';
+
+      renderTodoList()
+    }
+  </script>
 </body>
 
 </html>

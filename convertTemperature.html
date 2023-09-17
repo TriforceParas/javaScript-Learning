@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice 7(1)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice 7(1)</title>
 </head>
+
 <body>
-    <script>
-        function greet(name = 'there') {
-            console.log(`Hello ${name}!`);
-        }
-        greet();
+  <script>
+    function greet(name = 'there') {
+      console.log(`Hello ${name}!`);
+    }
+    greet();
 
-        function convertToFarenheit(celsius) {
-            return (celsius * 9 / 5) + 32;
-        }
+    function convertToFarenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
 
-        function convertToCelsius(farenheit) {
-            return (farenheit - 32) * 5 / 9;
-        }
+    function convertToCelsius(farenheit) {
+      return (farenheit - 32) * 5 / 9;
+    }
 
-        function convertTemperature(currentTemperature, convertion) {
-            if (convertion === 'C') {
-                return convertToFarenheit(currentTemperature) + 'F';
-            } else if (convertion === 'F') {
-                return convertToCelsius(currentTemperature) + 'C';
-            }
-        }
-        console.log(convertTemperature(25,'C'));
-        console.log(convertTemperature(86, 'F'));
-    </script>
+    function convertTemperature(currentTemperature, convertion) {
+      if (convertion === 'C') {
+        return convertToFarenheit(currentTemperature) + 'F';
+      } else if (convertion === 'F') {
+        return convertToCelsius(currentTemperature) + 'C';
+      }
+    }
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'F'));
+  </script>
 </body>
+
 </html>

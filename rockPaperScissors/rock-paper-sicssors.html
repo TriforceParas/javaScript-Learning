@@ -2,30 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="rockPaperScissor.css">
-    <script src="rock-paper-scissors.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rockPaperScissor.css">
+  <script src="rock-paper-scissors.js"></script>
 </head>
 
 <body>
-    <button onclick="
+  <button onclick="
         computerChoice = getComputerChoice();
         result = getResult('Rock', 'Scissors', 'Paper', computerChoice);
         alertResult('Rock', computerChoice, result);
         ">Rock</button>
-    <button onclick="
+  <button onclick="
         computerChoice = getComputerChoice();
         result = getResult('Paper', 'Rock', 'Scissors', computerChoice);
         alertResult('Paper', computerChoice, result);
         ">Paper</button>
-    <button onclick="
+  <button onclick="
         computerChoice = getComputerChoice();
         result = getResult('Scissors', 'Paper', 'Rock', computerChoice);
         alertResult('Scissors', computerChoice, result);
         ">Scissors</button>
-    <button onclick="
+  <button onclick="
         score.wins = 0;
         score.loss = 0;
         score.tie = 0;

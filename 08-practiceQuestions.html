@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>08-Practice Questions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-Practice Questions</title>
 </head>
+
 <body>
-    <script>
-        const product1 = {
-            name: 'basketball',
-            price: 2095
-        };
+  <script>
+    const product1 = {
+      name: 'basketball',
+      price: 2095
+    };
 
-        const product2 = {
-            name: 'socker',
-            price: '3025'
-        };
+    const product2 = {
+      name: 'socker',
+      price: '3025'
+    };
 
-        function comparePrice(first_product, second_product) {
-            if (first_product > second_product) {
-                return first_product
-            } else return second_product;
-        }
+    function comparePrice(first_product, second_product) {
+      if (first_product > second_product) {
+        return first_product
+      } else return second_product;
+    }
 
-        function isSameProduct(product1, product2) {
-            if (product1.name === product2.name && product1.price === product2.price) {
-                return 'Yes, They are same product'
-            } else return 'No, They are different product';
-        }
+    function isSameProduct(product1, product2) {
+      if (product1.name === product2.name && product1.price === product2.price) {
+        return 'Yes, They are same product'
+      } else return 'No, They are different product';
+    }
 
-        const product3 = {
-            name: 'Basketball;',
-            price: '2930'
-        };
+    const product3 = {
+      name: 'Basketball;',
+      price: '2930'
+    };
 
-        const product4 = {
-            name: 'Basketball;',
-            price: '2930'
-        };
+    const product4 = {
+      name: 'Basketball;',
+      price: '2930'
+    };
 
-        const string1 = 'Hello World';
+    const string1 = 'Hello World';
 
-        let lowerCaseString = string1.toLowerCase();
+    let lowerCaseString = string1.toLowerCase();
 
-        console.log(isSameProduct(product3, product4))
-        
-        console.log(lowerCaseString);
+    console.log(isSameProduct(product3, product4))
 
-        let repeatString = string1.repeat(2);
+    console.log(lowerCaseString);
 
-        console.log(repeatString);
-    </script>
+    let repeatString = string1.repeat(2);
+
+    console.log(repeatString);
+  </script>
 </body>
+
 </html>

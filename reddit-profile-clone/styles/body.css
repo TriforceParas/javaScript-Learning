@@ -1,164 +1,165 @@
 body {
-    margin: 0;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .body-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
-    position: relative;
-    background-color: #1a1a1b;
-    height: 500px;
-    width: 400px;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  position: relative;
+  background-color: #1a1a1b;
+  height: 500px;
+  width: 400px;
+  border-radius: 5px;
 }
 
 .profile-banner-picture {
-    position: relative;
+  position: relative;
 }
+
 .profile-details .profile-picture {
-    position: absolute;
-    bottom: -30px;
-    left: 15px;
-    border: solid #1a1a1b 5px;
-    border-radius: 5px;
-    
+  position: absolute;
+  bottom: -30px;
+  left: 15px;
+  border: solid #1a1a1b 5px;
+  border-radius: 5px;
+
 }
 
 .profile-details .user-name {
-    color: white;
-    position: absolute;
-    font-size: 16px;
-    font-weight: bold;
-    left: 10px;
-    top: 140px
+  color: white;
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  left: 10px;
+  top: 140px
 }
 
 .profile-details .user-id {
-    color: white;
-    font-size: 14px;
-    color: gray;
-    position: absolute;
-    top: 160px;
-    left: 10px;
+  color: white;
+  font-size: 14px;
+  color: gray;
+  position: absolute;
+  top: 160px;
+  left: 10px;
 }
 
 .create-profile {
-    position: absolute;
-    top: 190px;
-    padding: 10px 130px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 20px;
-    color: white;
-    background-color: rgb(255, 94, 0);
-    border: none;
+  position: absolute;
+  top: 190px;
+  padding: 10px 130px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(255, 94, 0);
+  border: none;
 
 }
 
 .top-details {
-    display: flex;
-    color: white;
-    position: absolute;
-    top: 240px;
-    left: 30px;
+  display: flex;
+  color: white;
+  position: absolute;
+  top: 240px;
+  left: 30px;
 }
 
 .bottom-details {
-    position: absolute;
-    bottom: 190px;
-    left: 30px;
+  position: absolute;
+  bottom: 190px;
+  left: 30px;
 }
 
 .title {
-    color: rgb(223, 223, 223);
-    font-size: 14px;
-    align-items: center;
+  color: rgb(223, 223, 223);
+  font-size: 14px;
+  align-items: center;
 }
 
 .title ion-icon {
-    color: cyan;
+  color: cyan;
 }
 
 .value {
-    color: gray;
-    font-size: 12px;
+  color: gray;
+  font-size: 12px;
 }
 
 .cake-day {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .create-post {
-    position: absolute;
-    bottom: 50px;
-    padding: 10px 135px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 20px;
-    color: black;
-    border: none;
-    background-color: white;
+  position: absolute;
+  bottom: 50px;
+  padding: 10px 135px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: black;
+  border: none;
+  background-color: white;
 }
 
 .social-link {
-    position: absolute;
-    bottom: 100px;
-    left: 30px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    background-color: rgb(56, 56, 56);
-    color: white;
-    font-weight: bold;    
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-weight: bold;
 }
 
 .more-option {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  font-weight: bold;
 }
 
 .banner-change {
-    position: absolute;
-    right: 8px;
-    top: 60px;
-    background-color: rgba(63, 63, 63,0.8);
-    color: white;
-    padding: 5px 7px;
-    border-radius: 20px;
-    align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 60px;
+  background-color: rgba(63, 63, 63, 0.8);
+  color: white;
+  padding: 5px 7px;
+  border-radius: 20px;
+  align-items: center;
 }
 
-.banner-change ion-icon{
-    height: 25px;
-    width: 25px;
+.banner-change ion-icon {
+  height: 25px;
+  width: 25px;
 }
 
 .profile-pic-change {
-    position: absolute;
-    left: 95px;
-    top: 110px;
-    background-color: rgba(63, 63, 63,0.8);
-    color: white;
-    padding: 5px 7px;
-    border-radius: 20px;
-    align-items: center;
+  position: absolute;
+  left: 95px;
+  top: 110px;
+  background-color: rgba(63, 63, 63, 0.8);
+  color: white;
+  padding: 5px 7px;
+  border-radius: 20px;
+  align-items: center;
 }
 
 .profile-pic-change ion-icon {
-    height: 25px;
-    width: 25px;
+  height: 25px;
+  width: 25px;
 }
