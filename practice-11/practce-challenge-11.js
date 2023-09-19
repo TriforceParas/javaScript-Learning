@@ -10,23 +10,30 @@ for (let i = 1; i <= 20; i++) {
 }
 
 // 11(w)
-let words1 = ['hello', 'world', 'search', 'good', 'search'];
-let words2 = ['not', 'found'];
-
-
-findIndex(words1, 'search');
-findIndex(words2, 'search');
-findIndex(['green', 'red', 'blue', 'red'], 'red');
-findIndex(['green', 'red', 'blue', 'red'], 'yellow');
-
 function findIndex(array, search) {
   let index = -1;
   for (let i = 0; i < array.length; i++) {
     if (array[i] === search) {
       index = i;
-      break // 11(p)
+      break
     }
   }
 
-  console.log(index);
+  return index
+};
+
+function unique(array) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const word = array[i];
+
+    if (findIndex(result, word) === -1) {
+      result.push(word);
+    }
+  }
+
+  return result;
 }
+console.log(unique(['green', 'red', 'blue', 'red']));
+console.log(unique(['red', 'green', 'green', 'red']));
