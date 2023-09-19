@@ -137,4 +137,77 @@ function countWords(words) {
   return result
 }
 
-console.log(countWords(['apple','grape','apple','apple']));
+console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+// 11(o,q)
+
+let words1 = ['hello', 'world', 'search', 'good', 'search'];
+let words2 = ['not', 'found'];
+
+
+findIndex(words1, 'search');
+findIndex(words2, 'search');
+findIndex(['green', 'red', 'blue', 'red'], 'red');
+findIndex(['green', 'red', 'blue', 'red'], 'yellow');
+
+function findIndex(array, search) {
+  let index = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === search) {
+      index = i;
+      break // 11(p)
+    }
+  }
+
+  console.log(index);
+}
+
+// 11(r)
+function removeEgg(foods) {
+  const result = [];
+  for (let i = 0; i < foods.length; i++) {
+    if (foods[i] === 'egg') {
+      continue;
+    }
+    result.push(foods[i]);
+  }
+  console.log(result);
+}
+
+removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+
+// 11(s)
+function removeTwoEggs(foods) {
+  const result = [];
+  let eggsRemoved = 0;
+  for (let i = 0; i < foods.length; i++) {
+    if (foods[i] === 'egg' && eggsRemoved < 2) {
+      eggsRemoved++;
+      continue;
+    }
+    result.push(foods[i]);
+  }
+  console.log(result);
+}
+
+removeTwoEggs(['egg', 'apple', 'egg', 'egg', 'ham']);
+
+// 11(t)
+function removeTwoLastEgg(foods) {
+  const reversedFoods = foods.slice();
+  // 11(u)
+  reversedFoods.reverse();
+  const result = [];
+  let eggsRemoved = 0;
+  for (let i = 0; i < reversedFoods.length; i++) {
+    if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+      eggsRemoved++;
+      continue;
+    }
+    result.push(reversedFoods[i]);
+  }
+  console.log(result.reverse());
+  console.log(foods);
+}
+
+removeTwoLastEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
