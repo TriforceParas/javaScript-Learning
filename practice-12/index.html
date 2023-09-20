@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title class="title">Document</title>
   <script src="practice-12.js"></script>
 </head>
 
@@ -12,9 +12,16 @@
   <button class="start-button" onclick="
         start();">
     Start</button>
-  <button class="add-to-cart-button" onclick="
+  <button onclick="
     addToCart();
     ">Add to Cart</button>
+  <div class="status"></div>
+  <button class="add-message" class="add-button" onclick="
+  addMessage();
+  ">Add</button>
+  <button class="remove-message" class="remove-button" onclick="
+  removeMessage();
+  ">Remove</button>
 </body>
 
 </html>
