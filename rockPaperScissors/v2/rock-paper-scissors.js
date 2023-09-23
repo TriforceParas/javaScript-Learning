@@ -8,6 +8,10 @@ function showResult() {
   document.querySelector('.results').innerHTML = `Wins: ${finalResult.win} Loss: ${finalResult.loss} Tie: ${finalResult.tie}`;
 }
 
+function showChoiceMade() {
+  document.querySelector('.choice-made').innerHTML = `You Chose ${playerMove}, Compuer Chose ${computerMove()}`
+}
+
 function decisionMaker(player = playerMove, computer = computerMove()) {
   if (player === computer) {
     finalResult.tie++;
@@ -51,53 +55,68 @@ document.addEventListener('keypress', (keyInput) => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
+  const updateStatus = document.querySelector('.choice-made');
   const rockButton = document.querySelector('.rock-button');
+  const resetScoreButton = document.querySelector('.reset-scores');
+  const confirmMenu = document.querySelector('.confirm-menu')
+  const yesButton = document.querySelector('.confirm-yes');
+  const noButton = document.querySelector('.confirm-no');
+  const autoPlayButton = document.querySelector('.auto-play');
+  let autoPlayActive = false;
   rockButton.addEventListener('click', () => {
     playerMove = 'rock';
     decisionMaker();
+    showChoiceMade();
   })
-});
-document.addEventListener('DOMContentLoaded', () => {
   const paperButton = document.querySelector('.paper-button');
   paperButton.addEventListener('click', () => {
     playerMove = 'paper';
     decisionMaker();
+    showChoiceMade();
   })
-});
-document.addEventListener('DOMContentLoaded', () => {
   const scissorsButton = document.querySelector('.scissors-button');
   scissorsButton.addEventListener('click', () => {
     playerMove = 'scissors';
     decisionMaker();
+    showChoiceMade();
   })
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const resetButton = document.querySelector('.reset-scores');
-  resetButton.addEventListener('click', () => {
-    localStorage.removeItem('store-scores');
+  // reset button
+  resetScoreButton.addEventListener('click', () => {
+    confirmMenu.classList.add('active');
+  })
+  yesButton.addEventListener('click', () => {
+    localStorage.removeItem("store-scores");
     finalResult = {
       win: 0,
       loss: 0,
       tie: 0
-    };
+    }
+    updateStatus.innerHTML = 'Score board resetted successfully'
+    setTimeout(() => { updateStatus.innerHTML =  'Choose a button to start the Game'},2000)
     showResult();
+    confirmMenu.classList.remove('active');
+    noButton.addEventListener('click', () => {
+      confirmMenu.classList.remove('active');
+    })
   })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  const autoPlayButton = document.querySelector('.auto-play');
-  let autoPlayActive = false;
+  // autoplay
   autoPlayButton.addEventListener('click', () => {
     if (autoPlayActive === false) {
+      autoPlayButton.innerHTML = 'Auto play: ON';
       autoPlayActive = true;
       autoPlayInterval = setInterval(() => {
         playerMove = computerMove();
         decisionMaker();
-      },1000)
+        showChoiceMade();
+      }, 1000)
     } else if (autoPlayActive === true) {
+      autoPlayButton.innerHTML = 'Auto play: OFF';
+      updateStatus.innerHTML = 'Auto Play stopped';
+      setInterval(() => { updateStatus.innerHTML = 'Choose a button to start the Game'; }, 2000)
       autoPlayActive = false;
       clearInterval(autoPlayInterval);
     }
   })
-})
+  decisionMaker();
+});

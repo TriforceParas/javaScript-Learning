@@ -5,10 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 49, 49);
+    color: white;
 }
 
 .title {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
     font-weight: bold;
 }
@@ -20,22 +22,66 @@ body {
     background-color: black;
     color: white;
     font-size: 20px;
-    border: none;
+    border: solid 3px orange;
     border-radius: 10px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
-
-.additional-button button {
+.reset-scores,
+.auto-play {
     padding: 15px;
     width: 190px;
     margin: 15px;
     margin-top: 0px;
-    background-color: rgb(248, 172, 31);
+    background-color: rgb(206, 134, 0);
     color: white;
     font-size: 20px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.reset-scores {
+    background-color: rgb(190, 0, 0);
+}
+
+.confirm-menu {
+    display: none;
+}
+
+.confirm-menu.active {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.confirm-yes,
+.confirm-no {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.confirm-yes {
+    background-color: rgb(190, 0, 0);
+}
+
+.confirm-no{
+    background-color: rgb(0, 175, 0);
+}
+.confirm-message {
+    margin-right: 10px;
+}
+
+.play-button button:hover,
+.additional-button button:hover,
+.confirm-yes:hover,
+.confirm-no:hover {
+    filter: brightness(130%);
 }
