@@ -52,6 +52,7 @@ document.addEventListener('keypress', (keyInput) => {
     playerMove = 'scissors';
   };
   decisionMaker();
+  showChoiceMade();
 })
 
 document.addEventListener('DOMContentLoaded', () => {
